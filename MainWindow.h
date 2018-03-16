@@ -14,14 +14,23 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
+    ~MainWindow( void );
 
 private slots:
-    void on_digitButton_clicked();
-    void on_clearButton_clicked();
+    void on_digitButton_released( void );
+    void on_binaryOperator_released( void );
+    void on_equalButton_released();
+    void on_clearButton_released( void );
 
 private:
+    //## Attributes
     Ui::MainWindow *ui;
+
+    double mFirstExp;
+    bool mIsWorkingOnSecondExpresion;
+    bool mIsTypingSecondNumber;
+    bool mStartNewEquation;
+    bool mCanPlaceZero;
 };
 
 #endif // MAINWINDOW_H

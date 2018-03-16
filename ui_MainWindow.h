@@ -57,7 +57,7 @@ public:
     QVBoxLayout *operatorLayout;
     QPushButton *clearButton;
     QPushButton *divideButton;
-    QPushButton *multipleButton;
+    QPushButton *multiplyButton;
     QPushButton *additionButton;
     QPushButton *subtractButton;
     QPushButton *equalButton;
@@ -508,10 +508,10 @@ public:
 
         operatorLayout->addWidget(divideButton);
 
-        multipleButton = new QPushButton(centralWidget);
-        multipleButton->setObjectName(QStringLiteral("multipleButton"));
-        sizePolicy2.setHeightForWidth(multipleButton->sizePolicy().hasHeightForWidth());
-        multipleButton->setSizePolicy(sizePolicy2);
+        multiplyButton = new QPushButton(centralWidget);
+        multiplyButton->setObjectName(QStringLiteral("multiplyButton"));
+        sizePolicy2.setHeightForWidth(multiplyButton->sizePolicy().hasHeightForWidth());
+        multiplyButton->setSizePolicy(sizePolicy2);
         QPalette palette15;
         palette15.setBrush(QPalette::Active, QPalette::Button, brush6);
         palette15.setBrush(QPalette::Active, QPalette::Base, brush6);
@@ -522,9 +522,9 @@ public:
         palette15.setBrush(QPalette::Disabled, QPalette::Button, brush6);
         palette15.setBrush(QPalette::Disabled, QPalette::Base, brush6);
         palette15.setBrush(QPalette::Disabled, QPalette::Window, brush6);
-        multipleButton->setPalette(palette15);
-        multipleButton->setFont(font3);
-        multipleButton->setStyleSheet(QLatin1String("QPushButton{\n"
+        multiplyButton->setPalette(palette15);
+        multiplyButton->setFont(font3);
+        multiplyButton->setStyleSheet(QLatin1String("QPushButton{\n"
 "	background-color: rgb(52, 101, 164);\n"
 "}\n"
 "\n"
@@ -532,7 +532,7 @@ public:
 "	background-color: rgb(85, 87, 83);\n"
 "}"));
 
-        operatorLayout->addWidget(multipleButton);
+        operatorLayout->addWidget(multiplyButton);
 
         additionButton = new QPushButton(centralWidget);
         additionButton->setObjectName(QStringLiteral("additionButton"));
@@ -643,8 +643,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Divitto's Calculator", nullptr));
-        actionClear->setText(QApplication::translate("MainWindow", "Clear", nullptr));
-        actionExit->setText(QApplication::translate("MainWindow", "Exit", nullptr));
+        actionClear->setText(QApplication::translate("MainWindow", "&Clear", nullptr));
+        actionExit->setText(QApplication::translate("MainWindow", "&Exit", nullptr));
 #ifndef QT_NO_SHORTCUT
         actionExit->setShortcut(QApplication::translate("MainWindow", "Esc", nullptr));
 #endif // QT_NO_SHORTCUT
@@ -717,13 +717,13 @@ public:
 #ifndef QT_NO_SHORTCUT
         clearButton->setShortcut(QApplication::translate("MainWindow", "Backspace", nullptr));
 #endif // QT_NO_SHORTCUT
-        divideButton->setText(QApplication::translate("MainWindow", "\303\267", nullptr));
+        divideButton->setText(QApplication::translate("MainWindow", "/", nullptr));
 #ifndef QT_NO_SHORTCUT
         divideButton->setShortcut(QApplication::translate("MainWindow", "/", nullptr));
 #endif // QT_NO_SHORTCUT
-        multipleButton->setText(QApplication::translate("MainWindow", "X", nullptr));
+        multiplyButton->setText(QApplication::translate("MainWindow", "*", nullptr));
 #ifndef QT_NO_SHORTCUT
-        multipleButton->setShortcut(QApplication::translate("MainWindow", "*", nullptr));
+        multiplyButton->setShortcut(QApplication::translate("MainWindow", "*", nullptr));
 #endif // QT_NO_SHORTCUT
         additionButton->setText(QApplication::translate("MainWindow", "+", nullptr));
 #ifndef QT_NO_SHORTCUT
